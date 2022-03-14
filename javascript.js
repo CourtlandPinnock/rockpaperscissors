@@ -15,27 +15,29 @@ function computerPlay(){
 }
 
 
+let cpuScore = 0;
+let playerScore = 0;
 
 function playRound(playerSelection,computerSelection) {
   
-    let tie;
-    let playerWin;
-    let cpuWin;
     
+    playerSelection = playerSelection.toLowerCase();
     if (playerSelection === 'rock') {
     if (playerSelection === 'rock' && computerSelection === 'rock') {
-        console.log(`Tie! You Have Both Chosen ${playerSelection}.`);
-        tie = 1;
-        return tie;
+        console.log(`Tie! You Have Both Chosen ${playerSelection.toUpperCase()}.`);
+        
     }
     else if (playerSelection === 'rock' && computerSelection !== 'paper') {
-        console.log(`You Win! Rock beats ${computerSelection}.`);
-        playerWin = 1;
-        return playerWin;
+        console.log(`You Win! Rock beats ${computerSelection.toUpperCase()}.`);
+        playerScore ++;
+        
+        
 
     }
     else {
-        console.log(`You lose! ${computerSelection} beats ${playerSelection}.`);
+        console.log(`You lose! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}.`);
+        cpuScore ++;
+
         
     }
     }
@@ -43,39 +45,61 @@ function playRound(playerSelection,computerSelection) {
 
     if (playerSelection === 'paper' && computerSelection === 'paper') {
         console.log('Tie! You have Both Chosen Paper.');
-        
+         
     }
-    if (playerSelection === 'paper' && computerSelection != 'scissors') {
-        console.log(`You Win! Paper beats ${computerSelection}.`);
+
+    else if (playerSelection === 'paper' && computerSelection != 'scissors') {
+        console.log(`You Win! Paper beats ${computerSelection.toUpperCase()}.`);
+        playerScore ++;
+        
         
     }
     else {
-        console.log(`You Lose! ${computerSelection} Beats Paper.`);
+        console.log(`You Lose! ${computerSelection.toUpperCase()} Beats Paper.`);
+        cpuScore++;
+        
         
     }
 }  
     if (playerSelection === 'scissors'){
     if (playerSelection === 'scissors' && computerSelection === 'scissors') {
         console.log('Tie! You Have Both Chosen Scissors.');
+        
+        
     }
     else if (playerSelection === 'scissors' && computerSelection != 'rock') {
-        console.log(`You Win! Scissors Beat ${computerSelection}.`);
+        console.log(`You Win! Scissors Beat ${computerSelection.toUpperCase()}.`);
+        playerScore ++;
         
     }
     else {
-         console.log(`You Lose! ${computerSelection} Beats ${playerSelection}.`);
-        
+         console.log(`You Lose! ${computerSelection.toUpperCase()} Beats ${playerSelection.toUpperCase()}.`);
+        cpuScore ++;
     }
+    
 }
+
+
 }
 function game() { 
-    let winner;
+    let lose;
+    let win;
+
     for (i = 0; i < 5; i++) {
         const computerSelection = computerPlay();
-        const playerSelection = 'rock';
+        const playerSelection = prompt('Enter You Choice', '');
         console.log(playRound(playerSelection,computerSelection));
+        
+        
     }
-
+    console.log(playerScore);
+    if (cpuScore > playerScore){
+        lose = console.log(`You lose! \n${cpuScore} - ${playerScore}`);
+         
+    }
+    else if (cpuScore < playerScore){
+        win = console.log(`You Win \n${playerScore} - ${cpuScore}`);
+    }   
 }
 
 game();

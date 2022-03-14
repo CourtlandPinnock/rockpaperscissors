@@ -29,3 +29,6 @@ tally who wins each time.
 compare who has more wins 
 declare winner.
 
+new function called game()
+loop the playRound() function 5 times. to play five rounds.
+keep score
