@@ -1,0 +1,31 @@
+rock paper scissors
+Take user input 
+Random computer rock paper or scissors.
+calculate what beats what.
+
+function computerplay
+randomly return rock paper or scissors
+
+function rockpaper scissors 
+take two parameters player selesction and computer selection
+return string that declares the winner.
+
+player selection incase sensitive.
+
+rock beats scissors
+paper beats rock
+scissors beat paper
+
+let gameResult;
+if (playerSelection === rock && computerSelection === rock) {
+    gameResult = 'Draw'
+};
+if playerSelection === 'rock' && computerSelection === 'paper' 
+
+
+loop 5 times 
+each time calling the playRound function.
+tally who wins each time.
+compare who has more wins 
+declare winner.
+
