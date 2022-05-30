@@ -1,0 +1,51 @@
+.body{
+    display:flex;
+    flex-direction: column;
+}
+
+.container{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: solid black;
+    border-width: 1px;   
+}
+#round{
+    text-align: center;
+    margin: 5px;
+}
+.scores{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+}
+
+#buttons{
+    display:flex;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+#computerscore{
+    padding-right:20px;
+    margin:5px 5px 10px 5px;
+}
+#playerscore{
+    margin:5px;
+}
+
+
+.container2{
+    display: flex;
+    flex-direction: column;
+}
+
+#log{
+    display: flex;
+    flex-direction: column;
+    padding:15px;
+    text-align: center;
+    width:300px;
+}
